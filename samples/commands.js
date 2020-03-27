@@ -59,3 +59,11 @@ command.compile({
 }).should.eql(
   ['start', '--host', '127.0.0.1', '--port', '80']
 );
+// Make an argument string
+command.stringify({
+  command: ['start'],
+  host: '127.0.0.1',
+  port: 80
+}).should.eql(
+  'start --host 127.0.0.1 --port 80'
+);

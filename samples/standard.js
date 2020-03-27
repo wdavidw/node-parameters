@@ -1,4 +1,3 @@
-
 const parameters = require('..');
 require('should');
 
@@ -16,16 +15,20 @@ require('should');
 const command = parameters({
   name: 'server',
   description: 'Start a web server',
-  options: [{
-    name: 'host', shortcut: 'h', 
-    description: 'Web server listen host'
-  },{
-    name: 'port', shortcut: 'p', type: 'integer', 
-    description: 'Web server listen port'
-  }]
+  options: {
+    'host': {
+      shortcut: 'h',
+      description: 'Web server listen host'
+    },
+    'port': {
+      shortcut: 'p',
+      type: 'integer',
+      description: 'Web server listen port'
+    }
+  }
 });
 // Print help
-console.log( command.help() );
+console.log(command.help());
 // Extract command arguments
 // Note, if the argument array is undefined, it default to `process.argv`
 // and is similar to running the command

@@ -23,6 +23,7 @@ Backward incompatibilities
 * compile: rename stringify method to compile
 
 New functionality
+* stringify: new method, convert a parameters object to an arguments string
 * options: new disabled property
 * help: new plugin
 * help: sort options
